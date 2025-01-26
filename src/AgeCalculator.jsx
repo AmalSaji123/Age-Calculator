@@ -30,7 +30,7 @@ function AgeCalculator() {
     <div className='flex justify-center min-h-screen bg-gray-500 p-20'>
         
         <div className='mt-10 p-10 bg-amber-50 rounded-2xl mb-16'>
-            <h1 className='flex justify-center text-2xl font-extrabold'>Age Calculator</h1>
+            <h1 className='flex justify-center text-2xl font-extrabold'>Age Calculator Application</h1>
             <input className='w-2xs mt-7'
             value={birthdate}
             onChange={(e)=>{
