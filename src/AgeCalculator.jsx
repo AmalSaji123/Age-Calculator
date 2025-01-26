@@ -31,7 +31,9 @@ function AgeCalculator() {
         
         <div className='mt-10 p-10 bg-amber-50 rounded-2xl mb-16'>
             <h1 className='flex justify-center text-2xl font-extrabold'>Age Calculator Application</h1>
-            <input className='w-2xs mt-7'
+            <input className='w-2xs mt-7 border-4 bord'
+
+            placeholder='Enter your DOB'
             value={birthdate}
             onChange={(e)=>{
                 setBirthdate(e.target.value)
