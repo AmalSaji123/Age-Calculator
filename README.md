@@ -1,8 +1,43 @@
-# React + Vite
+# MERN Invoice Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Full-stack invoice generator with PDF export and send-by-email.
 
-Currently, two official plugins are available:
+## Prerequisites
+- Node.js 18+
+- MongoDB (local or Atlas)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Setup
+
+### Server
+1. Copy server env and fill values:
+   ```bash
+   cp /workspace/server/.env.example /workspace/server/.env
+   ```
+2. Install and run:
+   ```bash
+   cd /workspace/server && npm install && npm run dev
+   ```
+
+### Client
+1. Copy client env and adjust API URL if needed:
+   ```bash
+   cp /workspace/client/.env.example /workspace/client/.env
+   ```
+2. Install and run:
+   ```bash
+   cd /workspace/client && npm install && npm run dev
+   ```
+
+Open client at http://localhost:5173
+
+## Email
+Configure SMTP in server `.env` to enable sending invoices via email. Example uses port 587 (STARTTLS). For Gmail or other providers, use app passwords.
+
+## Endpoints
+- `GET /api/invoices`
+- `POST /api/invoices`
+- `GET /api/invoices/:id`
+- `PUT /api/invoices/:id`
+- `DELETE /api/invoices/:id`
+- `GET /api/invoices/:id/pdf` (inline PDF)
+- `POST /api/invoices/:id/send` (body: `{ to: "email@example.com" }`)
